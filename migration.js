@@ -32,7 +32,6 @@ const createMenuItem = "CREATE TABLE MenuItem ( \
 db.run("DROP TABLE IF EXISTS Employee", (err) => {
   if (err) {
     console.log(err);
-    next(err);
   }
   db.run(createEmployee);
 });
@@ -40,7 +39,6 @@ db.run("DROP TABLE IF EXISTS Employee", (err) => {
 db.run("DROP TABLE IF EXISTS Timesheet", (err) => {
   if (err) {
     console.log(err);
-    next(err);
   }
   db.run(createTimesheet);
 });
@@ -48,7 +46,6 @@ db.run("DROP TABLE IF EXISTS Timesheet", (err) => {
 db.run("DROP TABLE IF EXISTS Menu", (err) => {
   if (err) {
     console.log(err);
-    next(err);
   }
   db.run(createMenu);
 });
@@ -56,7 +53,6 @@ db.run("DROP TABLE IF EXISTS Menu", (err) => {
 db.run("DROP TABLE IF EXISTS MenuItem", (err) => {
   if (err) {
     console.log(err);
-    next(err);
   }
   db.run(createMenuItem);
 });

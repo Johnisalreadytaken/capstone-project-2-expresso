@@ -1,13 +1,16 @@
 const express = require('express');
-const app = express();
 const morgan = require('morgan');
-const PORT = process.env.PORT || 4000;
+const bodyParser = require('body-parser');
 
 const employeesRouter = require('./api/employees.js');
 const menusRouter = require('./api/menus.js');
 
-app.use(morgan('dev'));
+const PORT = process.env.PORT || 4000;
+const app = express();
 
+
+app.use(morgan('dev'));
+app.use(bodyParser.json());
 app.use('/api/employees', employeesRouter);
 app.use('/api/menus', menusRouter);
 
